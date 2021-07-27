@@ -6,12 +6,12 @@ import DataContext from '../../data/DataContext'
 
 const UseContext = (props) => {
 
-    const context = useContext(DataContext)
+    const { state, setState } = useContext(DataContext)
 
     function addNumber(delta) {
-        context.setState({
-            ...context.state, // Preservando todos os meus outros atributos e setando apenas o number.
-            number: context.state.number + delta   // Respeitando o principio da imutabilidade.
+        setState({
+            ...state, // Preservando todos os meus outros atributos e setando apenas o number.
+            number: state.number + delta   // Respeitando o principio da imutabilidade.
         })
     }
 
@@ -23,8 +23,8 @@ const UseContext = (props) => {
             />
 
             <div className="center">
-                <span className="text">{context.state.number}</span>
-                <span className="text">{context.state.text}</span>
+                <span className="text">{state.number}</span>
+                <span className="text">{state.text}</span>
             </div>
 
             <div>
