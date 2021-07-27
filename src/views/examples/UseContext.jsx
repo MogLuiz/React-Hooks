@@ -16,7 +16,8 @@ const UseContext = (props) => {
             />
 
             <div className="center">
-                <span className="text">{context.number}</span>
+                <span className="text">{context.state.number}</span>
+                <span className="text">{context.state.text}</span>
             </div>
         </div>
     )
