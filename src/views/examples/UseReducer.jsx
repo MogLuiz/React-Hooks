@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-import { initialState, reducer } from '../../store'
+import { initialState, reducer } from '../../store/config'
 
 const UseReducer = (props) => {
 
